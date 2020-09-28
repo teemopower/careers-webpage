@@ -1,38 +1,212 @@
-.App {
-  text-align: center;
+@font-face {
+  font-family: "GT Eesti";
+  src: url("https://airtable.com/font/GT-Eesti-Display-Regular-2.eot") format("eot"), url("https://airtable.com/font/GT-Eesti-Display-Regular-2.ttf") format("ttf"), url("https://airtable.com/font/GT-Eesti-Display-Regular-2.woff") format("woff");
+  font-weight: 400;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+@font-face {
+  font-family: "GT Eesti";
+  src: url("https://airtable.com/font/GT-Eesti-Display-Medium-2.eot") format("eot"), url("https://airtable.com/font/GT-Eesti-Display-Medium-2.ttf") format("ttf"), url("https://airtable.com/font/GT-Eesti-Display-Medium-2.woff") format("woff");
+  font-weight: 500;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.hero-container {
+  min-width: 1300px;
+  display: grid;
+  grid-template-columns: 10% 40% 40% 10%;
+  grid-template-rows: 112px 32px 160px 200px 80px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.hero-label {
+  font-family: "GT Eesti";
+  font-size: 16px;
+  line-height: 1.25;
+  font-weight: medium;
+  letter-spacing: 8%;
+  color: #666666;
+  margin-bottom: 16px;
+  grid-column: 2/3;
+  grid-row: 2/3;
+}
+
+.hero-heading {
+  font-size: 64px;
+  line-height: 1.1;
+  font-weight: medium;
+  grid-column: 2/3;
+  grid-row: 3/4;
+  color: #333333;
+}
+
+.hero-description {
+  font-size: 24px;
+  line-height: 1.5;
+  font-weight: 400;
+  grid-column: 2/3;
+  grid-row: 4/5;
+}
+
+.hero-image-section {
+  margin-left: 104px;
+  grid-column: 3/4;
+  grid-row: 2/3;
+}
+
+.hero-image {
+  max-height: 350px;
+}
+
+.filter-form {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.25;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  min-width: 1300px;
+  color: #666666;
+  margin-bottom: 96px;
 }
 
-.App-link {
-  color: #61dafb;
+.form-group-dept {
+  margin-right: 32px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.form-group-dept > select {
+  width: 200px;
+  color: #666666;
+  border-radius: 5px;
+}
+
+.form-group-dept > div {
+  margin-bottom: 16px;
+}
+
+.form-group-loc > div {
+  margin-bottom: 16px;
+}
+
+.form-group-loc > select {
+  width: 200px;
+  color: #666666;
+  border-radius: 5px;
+}
+
+.form-control {
+  padding: 8px;
+}
+
+.joblist-head {
+  display: grid;
+  grid-template-columns: 10% 80% 10%;
+  min-width: 1300px;
+}
+
+.joblist-heading {
+  font-weight: medium;
+  font-size: 32px;
+  line-height: 1.25;
+  color: #333333;
+}
+
+.joblist-group {
+  display: flex;
+}
+
+.joblist-group > img {
+  margin-right: 10px;
+}
+
+.job-container {
+  min-width: 400px;
+  border-top: thin solid black;
+  display: inline-block;
+  margin: 24px 0 64px 10%;
+  padding-top: 24px;
+  min-height: 64px;
+}
+
+.job-card {
+  min-width: 1300px;
+}
+
+.job-location-title {
+  display: inline-block;
+  color: #666666;
+  font-weight: medium;
+  font-size: 16px;
+  line-height: 1.25;
+}
+
+.job-position-title {
+  color: #333333;
+  font-weight: medium;
+  font-size: 24px;
+  line-height: 1.25;
+}
+
+.job-position-title > span{
+ width: 200px;
+}
+
+.footer {
+  height: 112px;
+}
+
+@media only screen and (max-device-width: 832px) {
+  .hero-container {
+    min-width: 615px;
+    grid-template-columns: 10% 80% 10%;
+    grid-template-rows: 80px 32px 100px 210px 400px;
   }
-  to {
-    transform: rotate(360deg);
+  
+  .hero-heading {
+    font-size: 32px;
+    line-height: 1.25;
+  }
+  
+  .hero-description {
+    font-size: 20px;
+  }
+  
+  .hero-image-section {
+    grid-column: 2/3;
+    grid-row: 5/6;
+  }
+  
+  .filter-form {
+    font-size: 16px;
+    font-weight: medium;
+    min-width: 615px;
+    margin-bottom: 80px;
+  }
+
+  .job-card {
+    min-width: 615px;
+  }
+
+  .job-container {
+    min-width: 200px;
+    max-width: 205px;
+    border-top: thin solid black;
+    display: inline-block;
+    vertical-align: top
+  }
+
+  .joblist-heading {
+    font-size: 24px;
+  }
+
+  .job-position-title {
+    max-width: 400px;
+  }
+
+  .joblist-head {
+    display: grid;
+    grid-template-columns: 5% 90% 5%;
+    min-width: 1300px;
+  }
+
+  .footer {
+    height: 80px;
   }
 }
